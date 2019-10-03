@@ -83,3 +83,12 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+//ADMIN CONTROLLER & VIEW
+define('ADMIN_URL', 'admin_mandala_finance/');
+define('ADMIN_URL_DASHBOARD', 'admin_mandala_finance/dashboard/');
+define('ADMIN_URL_LOGIN', 'admin_mandala_finance/login/');
+define('ADMIN_URL_LOGOUT', 'admin_mandala_finance/logout/');
+
+//ADMIN MASTERPAGE VIEW
+define('ADMIN_MASTERPAGE', 'admin_mandala_finance/page/');
