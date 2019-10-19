@@ -92,3 +92,22 @@ define('ADMIN_URL_LOGOUT', 'admin_mandala_finance/logout/');
 
 //ADMIN MASTERPAGE VIEW
 define('ADMIN_MASTERPAGE', 'admin_mandala_finance/page/');
+
+//ASSETS FRONTEND
+define('ASSETS_FRONTEND_URL', 'html/public/');
+
+//ASSETS BACKEND
+define('ASSETS_BACKEND_URL', 'assets/backend/assets/');
+
+//IMAGE / MEDIA
+define('ASSETS_IMAGE_URL', 'assets/images/');
+define('ASSETS_UPLOADS_URL', 'assets/uploads/');
+
+//NEW MENU
+define('ADMIN_URL_USER', 'user/');
+define('ADMIN_URL_CALCULATION', 'calculation/');
+define('ADMIN_URL_BANNER', 'banner/');
+
+//COMPANY
+define('COMPANY', 'Mandala Finance');
+
