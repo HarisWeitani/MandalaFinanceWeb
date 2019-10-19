@@ -52,7 +52,7 @@ Class Session_entry {
 			//success login
 			$credentials = array('admin_id' => $admin_id,'admin_name' => $admin_name, 'admin_privilege_id' => $admin_privilege_id, 'logged_admin' => TRUE);
 			$this->obj->session->set_userdata($credentials);
-			redirect(ADMIN_URL_DASHBOARD);
+			redirect(ADMIN_URL . ADMIN_URL_CALCULATION);
 		} else {
 			//fail login
 			$this->obj->session->set_flashdata('error','Invalid username or password');
