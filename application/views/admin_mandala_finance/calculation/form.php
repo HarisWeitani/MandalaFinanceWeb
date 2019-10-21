@@ -51,7 +51,7 @@
                                         <label>Interest (<?php echo $dt->dt_interest_name ?>)</label>
                                     </div>
                                     <div class='col-sm-9'>
-                                        <input name='interests5Year[]' value="<?php echo $dt->dt_interest_value ?>" type='number' step='any' class='form-control' />
+                                        <input onClick="this.select()" name='interests5Year[]' value="<?php echo $dt->dt_interest_value ?>" type='number' step='any' class='form-control' />
                                     </div>
                                 </div>
                             <?php endforeach ?>
@@ -83,7 +83,7 @@
                                         <label>Interest (<?php echo $dt->dt_interest_name ?>)</label>
                                     </div>
                                     <div class='col-sm-9'>
-                                        <input name='interests10Year[]' value="<?php echo $dt->dt_interest_value ?>" type='number' step='any' class='form-control' />
+                                        <input onClick="this.select()" name='interests10Year[]' value="<?php echo $dt->dt_interest_value ?>" type='number' step='any' class='form-control' />
                                     </div>
                                 </div>
                             <?php endforeach ?>
@@ -116,7 +116,7 @@
                                         <label>Interest (<?php echo $dt->dt_interest_name ?>)</label>
                                     </div>
                                     <div class='col-sm-9'>
-                                        <input name='interests15Year[]' value="<?php echo $dt->dt_interest_value ?>" type='number' step='any' class='form-control' />
+                                        <input onClick="this.select()" name='interests15Year[]' value="<?php echo $dt->dt_interest_value ?>" type='number' step='any' class='form-control' />
                                     </div>
                                 </div>
                             <?php endforeach ?>
@@ -158,9 +158,9 @@ $(document).ready(function() {
             initialValue15Year = (count + 1) * 12;
         }
         
-        $(".list_interest_5Year").append("<div class='form-group row'><div class ='col-md-3'><label>Interest (" + initialValue5Year + " Bulan" + ")</label></div><div class='col-sm-9'><input name='interests5Year[]' type='number' step='any' class='form-control' /></div></div>");
-        $(".list_interest_10Year").append("<div class='form-group row'><div class ='col-md-3'><label>Interest (" + initialValue5Year + " Bulan" + ")</label></div><div class='col-sm-9'><input name='interests10Year[]' type='number' step='any' class='form-control' /></div></div>");
-        $(".list_interest_15Year").append("<div class='form-group row'><div class ='col-md-3'><label>Interest (" + initialValue5Year + " Bulan" + ")</label></div><div class='col-sm-9'><input name='interests15Year[]' type='number' step='any' class='form-control' /></div></div>");
+        $(".list_interest_5Year").append("<div class='form-group row'><div class ='col-md-3'><label>Interest (" + initialValue5Year + " Bulan" + ")</label></div><div class='col-sm-9'><input onClick="this.select()" name='interests5Year[]' type='number' step='any' class='form-control' /></div></div>");
+        $(".list_interest_10Year").append("<div class='form-group row'><div class ='col-md-3'><label>Interest (" + initialValue5Year + " Bulan" + ")</label></div><div class='col-sm-9'><input onClick="this.select()" name='interests10Year[]' type='number' step='any' class='form-control' /></div></div>");
+        $(".list_interest_15Year").append("<div class='form-group row'><div class ='col-md-3'><label>Interest (" + initialValue5Year + " Bulan" + ")</label></div><div class='col-sm-9'><input onClick="this.select()" name='interests15Year[]' type='number' step='any' class='form-control' /></div></div>");
         
         initialValue5Year += 12;
     });
