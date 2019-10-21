@@ -169,18 +169,19 @@ $(document).ready(function() {
     $('#update_interest_5Year').on('click', function(event) {
         event.preventDefault();
         let count = parseInt($('#totalCount').val());
+        tempCount += 1;
         if(!isNaN(count) )
         {
-            initialValue5Year =  (count + 1) * 12;
-            initialValue10Year = (count + 1) * 12;
-            initialValue15Year = (count + 1) * 12;
+            initialValue5Year =  (count + tempCount) * 12;
+            initialValue10Year = (count + tempCount) * 12;
+            initialValue15Year = (count + tempCount) * 12;
         }
+        alert(initialValue15Year);
         
-        $(".list_interest_5Year").append("<div class='form-group row'><div class ='col-md-3'><label>Interest (" + initialValue5Year + " Bulan" + ")</label></div><div class='col-sm-9'><input name='newInterests5Year[]' type='number' step='any' class='form-control' /></div></div>");
-        $(".list_interest_10Year").append("<div class='form-group row'><div class ='col-md-3'><label>Interest (" + initialValue5Year + " Bulan" + ")</label></div><div class='col-sm-9'><input name='newInterests10Year[]' type='number' step='any' class='form-control' /></div></div>");
-        $(".list_interest_15Year").append("<div class='form-group row'><div class ='col-md-3'><label>Interest (" + initialValue5Year + " Bulan" + ")</label></div><div class='col-sm-9'><input name='newInterests15Year[]' type='number' step='any' class='form-control' /></div></div>");
-        
-        initialValue5Year += 12;
+        $(".list_interest_5Year").append("<div class='form-group row'><div class ='col-md-3'><label>Interest (" + initialValue5Year + " Bulan" + ")</label></div><div class='col-sm-9'><input onClick="this.select()" name='newInterests5Year[]' type='number' step='any' class='form-control' /></div></div>");
+        $(".list_interest_10Year").append("<div class='form-group row'><div class ='col-md-3'><label>Interest (" + initialValue5Year + " Bulan" + ")</label></div><div class='col-sm-9'><input onClick="this.select()" name='newInterests10Year[]' type='number' step='any' class='form-control' /></div></div>");
+        $(".list_interest_15Year").append("<div class='form-group row'><div class ='col-md-3'><label>Interest (" + initialValue5Year + " Bulan" + ")</label></div><div class='col-sm-9'><input onClick="this.select()" name='newInterests15Year[]' type='number' step='any' class='form-control' /></div></div>");
+        // initialValue15Year += 12;
     });
 });
 
