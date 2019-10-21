@@ -64,6 +64,26 @@ class Model_calculation extends CI_Model {
 
         $this->db->where("calculation_id", $id);        
         $this->db->update("ms_calculation", $data);
+
+        $this->db->where('dt_interest_id', $id);
+        $this->db->update('dt_interest', $data);
+
+        //Update 5 - 10 Calculation
+        $id10Year = $id + 1;
+        $this->db->where("calculation_id", $id10Year);        
+        $this->db->update("ms_calculation", $data);
+
+        $this->db->where('dt_interest_id', $id10Year);
+        $this->db->update('dt_interest', $data);
+
+        //Update 10 - 15 Year Calculation
+        $id15Year = $id10Year + 1;
+        $this->db->where("calculation_id", $id15Year);        
+        $this->db->update("ms_calculation", $data);
+
+        $this->db->where('dt_interest_id', $id15Year);
+        $this->db->update('dt_interest', $data);
+
     }
 
 }

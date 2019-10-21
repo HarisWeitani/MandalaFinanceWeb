@@ -75,7 +75,7 @@
 
 				$content = $this->data["content"]->row();
 
-				$this->data["vehicle_type_id"] = $id; // 1 [PK]
+				$this->data["calculation_id"] = $id; // 1 [PK]
 				$this->data["vehicle_type_name"] = $content->vehicle_type_name;// 2
 				$this->data["vehicle_age"] = $content->vehicle_age;
 

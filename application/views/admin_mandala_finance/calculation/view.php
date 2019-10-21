@@ -47,7 +47,7 @@
                                     <?php foreach($result->interests as $i): ?>
                                         <td>
                                             <?php if(strlen($i->dt_interest_value) > 0 ): ?>
-                                                <?php echo $i->dt_interest_value ?>
+                                                <?php echo $i->dt_interest_value ?> %
                                                 
                                             <?php else: ?>
                                                 <?php echo "Kosong gan" ?>
@@ -85,34 +85,6 @@
         </div>
     </div>
 </section>
-
-<!-- Modal -->
-<form id="delete" method="post" action="<?php echo base_url(). ADMIN_URL . $this->router->fetch_class(); ?>/delete">
-    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">Delete Item</h4>
-                </div>
-                <div class="modal-body">
-                    Are you sure u want to delete this Item??
-                    <br/>
-                    <br/>
-                    YOU NO LONGER ENABLE TO RETRIEVE THE DATA AFTER IT DELETED
-                    <input type="hidden" class="form-control" name="modal" id="modal" value="" />
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" id="submit" value="Delete Item" class="btn btn-primary" />
-                    <button type="button" class="btn" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
-<!-- End Modal -->
 
 
 <!-- End  -->

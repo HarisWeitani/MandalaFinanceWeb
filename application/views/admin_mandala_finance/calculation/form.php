@@ -128,6 +128,7 @@
                             <div class="form-group row">
                                 <div class="col-md-9 col-md-offset-3">
                                     <button type="submit" class="btn width-150 btn-primary">Submit</button>
+                                    <button type="button" class="open-deleteModal btn btn-danger" data-toggle="modal" data-id="<?php echo $calculation_id ?>" data-target="#deleteModal">Delete</button>
                                     <a href="<?php echo base_url() . ADMIN_URL ?><?php echo $this->uri->segment(2); ?>/"><button type="button" class="btn btn-default">Cancel</button></a>
                                 </div>
                             </div>
@@ -143,10 +144,39 @@
 </section>
 <!-- End -->
 
+<!-- Modal -->
+<form id="delete" method="post" action="<?php echo base_url(). ADMIN_URL . $this->router->fetch_class(); ?>/delete">
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Delete Item</h4>
+                </div>
+                <div class="modal-body">
+                    Are you sure u want to delete this Item??
+                    <br/>
+                    <br/>
+                    YOU NO LONGER ENABLE TO RETRIEVE THE DATA AFTER IT DELETED
+                    <input type="hidden" class="form-control" name="modal" id="modal" value="" />
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" id="submit" value="Delete Item" class="btn btn-primary" />
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<!-- End Modal -->
+
 <script>
 var initialValue5Year = 12;
 var initialValue10Year = 12;
 var initialValue15Year = 12;
+var tempCount = 0;
 $(document).ready(function() {
     $('#add_interest_5Year').on('click', function(event) {
         event.preventDefault();

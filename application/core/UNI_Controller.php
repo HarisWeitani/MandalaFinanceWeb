@@ -271,4 +271,12 @@ class UNIAdmin_Controller extends UNI_Controller {
     }
 }
 
+class UNIPublic_Controller extends UNI_Controller {
+
+	public function __construct() {
+		parent::__construct();
+		$this->layout->set_masterpage('page');
+	}
+}
+
 ?>
