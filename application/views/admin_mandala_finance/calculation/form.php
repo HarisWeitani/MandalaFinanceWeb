@@ -9,7 +9,7 @@
                 <div class="margin-bottom-50">
                     <br />
                     <!-- Horizontal Form -->
-                    <?php echo form_open_multipart(current_url());?>
+                    <?php echo form_open_multipart(current_url(), 'id="formid"');?>
                     	<div class="form-group row">
 			                <div class="col-md-3">
 			                    <label>Vehicle Type Name</label>
@@ -181,6 +181,13 @@ var initialValue15Year = 12;
 var tempCount = 0;
 $(document).ready(function() {
     $(document).on('click','input[type=number][id=interest_value]',function(){ this.select(); });
+    $('#formid').on('keyup keypress', function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 13) { 
+            e.preventDefault();
+            return false;
+        }
+    });
     $('#add_interest_5Year').on('click', function(event) {
         event.preventDefault();
         let count = parseInt($('#totalCount').val());
