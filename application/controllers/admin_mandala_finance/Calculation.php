@@ -206,6 +206,7 @@
 					//Untuk Update
 					else
 					{
+						
 						//Id untuk 0 - 5 Year
 						$id5Year = $id;
 						//Id untuk 5 - 10 Year
@@ -233,38 +234,42 @@
 						$newInterests5Year = $this->input->post('newInterests5Year');
 						$newInterests10Year = $this->input->post('newInterests10Year');
 						$newInterests15Year = $this->input->post('newInterests15Year');
-
+						
 						$totalInserted = sizeof($interests5Year) + sizeof($newInterests5Year);
 						//Ini ketika, isi di databasenya 4 tapi yang diinsert adalah 5
 						if($count < $totalInserted)
 						{
 							
 							$initValue = $count;
-							
+							$tempBulan = array();
+
 							//Insert semua dengan value 0
 							for($h = $count; $h < $totalInserted; $h++)
 							{
-								$g = $initValue + 1;
+								$g = $h + 1;
 								$tmp = ($multiplier * $g) . ' Bulan';
+								array_push($tempBulan,$tmp);
 								$sql = "SELECT distinct(dt_interest_id), ? as dt_interest_name, 0 as dt_interest_value, ? as created_date FROM dt_interest WHERE dt_interest_id NOT IN(SELECT dt_interest_id FROM dt_interest WHERE dt_interest_name = ?)";
 								$dataSet = $this->db->query($sql, array($tmp, $date, $tmp))->result();
+								
 								$this->Model_detail_interest->insert_batch($dataSet);
 							}
 
 							for($i = 0; $i <  sizeof($newInterests5Year); $i++)
 							{
-								$data5Year = array("dt_interest_value" => $newInterests5Year[$i], "updated_date" => $date, "updated_by" => $this->session->userdata('admin_id') );
-								$data10Year = array("dt_interest_value" => $newInterests10Year[$i], "updated_date" => $date, "updated_by" => $this->session->userdata('admin_id') ); 
-								$data15Year = array("dt_interest_value" => $newInterests15Year[$i], "updated_date" => $date, "updated_by" => $this->session->userdata('admin_id') );
-								$this->db->where("dt_interest_name", $tmp)->where("dt_interest_id", $id5Year)->update("dt_interest", $data5Year);
-								$this->db->where("dt_interest_name", $tmp)->where("dt_interest_id", $id10Year)->update("dt_interest", $data10Year);
-								$this->db->where("dt_interest_name", $tmp)->where("dt_interest_id", $id15Year)->update("dt_interest", $data15Year);
+
+								$newData5Year = array("dt_interest_value" => $newInterests5Year[$i], "updated_date" => $date, "updated_by" => $this->session->userdata('admin_id') );
+								$newData10Year = array("dt_interest_value" => $newInterests10Year[$i], "updated_date" => $date, "updated_by" => $this->session->userdata('admin_id') ); 
+								$newData15Year = array("dt_interest_value" => $newInterests15Year[$i], "updated_date" => $date, "updated_by" => $this->session->userdata('admin_id') );
+								$this->db->where("dt_interest_name", $tempBulan[$i])->where("dt_interest_id", $id5Year)->update("dt_interest", $newData5Year);
+								$this->db->where("dt_interest_name", $tempBulan[$i])->where("dt_interest_id", $id10Year)->update("dt_interest", $newData10Year);
+								$this->db->where("dt_interest_name", $tempBulan[$i])->where("dt_interest_id", $id15Year)->update("dt_interest", $newData15Year);
 							}
 
 							//Ini buat insert semuanya
 							for($j = $totalInserted; $j < $count; $j++)
 							{
-								$g = $initValue + 1;
+								$g = $j + 1;
 								$tmp = ($multiplier * $g) . ' Bulan';
 								$data5Year = array("dt_interest_value" => $interests5Year[$i], "updated_date" => $date, "updated_by" => $this->session->userdata('admin_id') );
 								$data10Year = array("dt_interest_value" => $interests10Year[$i], "updated_date" => $date, "updated_by" => $this->session->userdata('admin_id') ); 
