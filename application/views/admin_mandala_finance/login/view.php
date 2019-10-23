@@ -6,12 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?php echo COMPANY; ?></title>
 
-    <link href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>/common/img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
-    <link href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>/common/img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
-    <link href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>/common/img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
-    <link href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>/common/img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
-    <link href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>/common/img/favicon.png" rel="icon" type="image/png">
-    <link href="favicon.ico" rel="shortcut icon">
+    <link href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>common/img/favicon-mandala.png" rel="icon" type="image/png">
 
     <!-- HTML5 shim and Respond.js for < IE9 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -96,19 +91,25 @@
     <!-- Clean UI Scripts -->
     <script src="<?php echo base_url() . ASSETS_BACKEND_URL; ?>/common/js/common.js"></script>
     <script src="<?php echo base_url() . ASSETS_BACKEND_URL; ?>/common/js/demo.temp.js"></script>
+    <style>
+        .single-page-block-header .logo {
+            max-width: 135px;
+            height: 88.2px;
+        }
+    </style>
 </head>
 <body class="theme-default">
 
 <section class="page-content">
-<div class="page-content-inner" style="background-image: url(<?php echo base_url() . ASSETS_BACKEND_URL; ?>/common/img/temp/login/4.jpg)">
+<div class="page-content-inner" style="background-image: url(<?php echo base_url() . ASSETS_BACKEND_URL; ?>common/img/temp/login/4.jpg)">
 
     <!-- Login Omega Page -->
-    <div class="single-page-block-header">
+    <div class="single-page-block-header" style="padding-left: 0px; padding-top: 0px; padding-bottom: 0px;">
         <div class="row">
             <div class="col-lg-4">
                 <div class="logo">
                     <a href="javascript: history.back();">
-                        <img src="<?php echo base_url() . ASSETS_BACKEND_URL; ?>/common/img/logo.png" alt="Clean UI Admin Template" />
+                        <img src="<?php echo base_url() . ASSETS_BACKEND_URL; ?>common/img/logo-mandala.png" width="100%" alt="Admin Mandala Finance" />
                     </a>
                 </div>
             </div>

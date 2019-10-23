@@ -6,12 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?php echo $page_title; ?></title>
 
-    <link href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>common/img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
-    <link href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>common/img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
-    <link href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>common/img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
-    <link href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>common/img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
-    <link href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>common/img/favicon.png" rel="icon" type="image/png">
-    <link href="favicon.ico" rel="shortcut icon">
+    <link href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>common/img/favicon-mandala.png" rel="icon" type="image/png">
 
     <!-- HTML5 shim and Respond.js for < IE9 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -44,7 +39,15 @@
 
     <!-- Clean UI Styles -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() . ASSETS_BACKEND_URL; ?>common/css/source/main.css">
-
+    <style>
+        nav.left-menu .logo-container {
+            padding: 0px 25px 0px;
+        }
+        nav.left-menu .logo-container .logo
+        {
+            height: 89px;
+        }
+    </style>
     <!-- Vendors Scripts -->
     <!-- v1.0.0 -->
     <script src="<?php echo base_url() . ASSETS_BACKEND_URL; ?>vendors/jquery/jquery.min.js"></script>
@@ -103,9 +106,8 @@
 <body class="theme-default">
 <nav class="left-menu" left-menu>
     <div class="logo-container">
-        <a href="<?php echo base_url() . ADMIN_URL_USER; ?>" class="logo">
-            <img src="<?php echo base_url() . ASSETS_BACKEND_URL . "common/img/logo.png"?>" alt='Clean UI Admin Template' />
-            <img class="logo-inverse" src="<?php echo base_url() . ASSETS_BACKEND_URL; ?>common/img/logo-inverse.png" alt="Clean UI Admin Template" />
+        <a href="<?php echo base_url() . ADMIN_URL . ADMIN_URL_CALCULATION; ?>" class="logo">
+            <img src="<?php echo base_url() . ASSETS_BACKEND_URL . "common/img/rsz_logo-mandala.png"?>" alt='Admin Mandala Finance' />
         </a>
     </div>
     <div class="left-menu-inner scroll-pane">
