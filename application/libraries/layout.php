@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-Class Layout {
+class Layout {
 	private $CI;
 	private $masterpage;
 	private $page_title;
