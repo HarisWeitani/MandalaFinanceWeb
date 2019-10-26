@@ -33,6 +33,7 @@ class Calculation extends UNIPublic_Controller {
     public function get_all()
     {
         $calculations = $this->db->join('dt_interest', 'dt_interest.dt_interest_id = ms_calculation.interest_id', 'left')
+        ->where("is_deleted", 0)
         ->get('ms_calculation');
 
         $data = array();
