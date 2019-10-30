@@ -136,6 +136,7 @@
                     </span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="" role="menu">
+                <a class="dropdown-item" href="<?php echo base_url() . ADMIN_URL . ADMIN_URL_CHANGE_PASSWORD . "form/" . $this->session->userdata('admin_id'); ?>"><i class="dropdown-icon icmn-circle-right"></i> Change Password</a>
                     <a class="dropdown-item" href="<?php echo base_url() . ADMIN_URL_LOGOUT; ?>"><i class="dropdown-icon icmn-exit"></i> Logout</a>
                 </ul>
             </div>

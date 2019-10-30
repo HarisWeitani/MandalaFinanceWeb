@@ -90,6 +90,8 @@ define('ADMIN_URL_DASHBOARD', 'admin_mandala_finance/dashboard/');
 define('ADMIN_URL_LOGIN', 'admin_mandala_finance/login/');
 define('ADMIN_URL_LOGOUT', 'admin_mandala_finance/logout/');
 
+
+
 //ADMIN MASTERPAGE VIEW
 define('ADMIN_MASTERPAGE', 'admin_mandala_finance/page/');
 
@@ -107,6 +109,7 @@ define('ASSETS_UPLOADS_URL', 'assets/uploads/');
 define('ADMIN_URL_USER', 'user/');
 define('ADMIN_URL_CALCULATION', 'calculation/');
 define('ADMIN_URL_BANNER', 'banner/');
+define('ADMIN_URL_CHANGE_PASSWORD', 'change_password/');
 
 //COMPANY
 define('COMPANY', 'Mandala Finance');
