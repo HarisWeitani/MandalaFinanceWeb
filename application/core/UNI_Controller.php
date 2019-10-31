@@ -266,7 +266,7 @@ class UNIAdmin_Controller extends UNI_Controller {
             $this->session->set_flashdata('error','Please login first');
             redirect(ADMIN_URL_LOGIN);
         }else if ( $this->session_entry->check_logged_admin() AND in_array(strtolower(get_class($this)), $unlocked) ) {
-            redirect(ADMIN_URL_DASHBOARD);
+            redirect(ADMIN_URL . ADMIN_URL_CALCULATION);
         }
     }
 }
